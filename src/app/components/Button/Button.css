@@ -1,9 +1,10 @@
 .button {
+  @apply border border-solid  border-light-950 flex inline-flex flex-row py-2.5 px-4 rounded-3xl gap-1.5;
 }
 .button.outline {
-  @apply border border-solid border-main py-2.5 px-4 rounded-3xl flex flex-row-reverse gap-1.5;
+  @apply bg-white text-light-950;
 }
 
 .button.contained {
-  @apply bg-main-950 py-2.5 px-4 rounded-3xl text-white flex flex-row-reverse;
+  @apply bg-light-950 text-white;
 }

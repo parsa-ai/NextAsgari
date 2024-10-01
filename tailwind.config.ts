@@ -5,9 +5,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        black: "#000",
-        white: "#fff",
-        information: {
+        "black": "#000",
+        "white": "#fff",
+        "information": {
           50: "#EFF6FF",
           100: "#DBEAFE",
           200: "#BFDBFE",
@@ -20,7 +20,7 @@ const config: Config = {
           900: "#1E3A8A",
           950: "#172E54",
         },
-        light: {
+        "light": {
           50: "#F5F5F6",
           100: "#E5E6E8",
           200: "#CDCFD4",
