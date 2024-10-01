@@ -2,20 +2,13 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const AnjomanBold = localFont({
-  src: "./fonts/Anjoman-Bold.woff",
-  variable: "--Anjoman-Bold",
-  weight: "bold",
-});
-const AnjomanRegular = localFont({
-  src: "./fonts/Anjoman-Regular.woff",
-  variable: "--Anjoman-Regular",
-  weight: "normal",
-});
-const AnjomanLight = localFont({
-  src: "./fonts/Anjoman-Light.woff",
-  variable: "--Anjoman-Light",
-  weight: "100",
+const Anjoman = localFont({
+  src: [
+    { path: "./fonts/Anjoman-Bold.woff", weight: "800" },
+    { path: "./fonts/Anjoman-Regular.woff", weight: "500" },
+    { path: "./fonts/Anjoman-Light.woff", weight: "300" },
+  ],
+  variable: "--Anjoman",
 });
 
 export const metadata: Metadata = {
@@ -30,11 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${AnjomanBold.variable} ${AnjomanRegular.variable} ${AnjomanLight.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${Anjoman.variable} antialiased`}>{children}</body>
     </html>
   );
 }
