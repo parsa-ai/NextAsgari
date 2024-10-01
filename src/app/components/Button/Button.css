@@ -1,3 +1,9 @@
-.button-outline{
-    @apply border border-solid border-main py-2.5 px-4 rounded-3xl flex flex-row-reverse gap-1.5
+.button {
+}
+.button.outline {
+  @apply border border-solid border-main py-2.5 px-4 rounded-3xl flex flex-row-reverse gap-1.5;
+}
+
+.button.contained {
+  @apply bg-main-950 py-2.5 px-4 rounded-3xl text-white flex flex-row-reverse;
 }
