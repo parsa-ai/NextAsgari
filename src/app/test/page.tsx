@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../components/Button/Button";
 import ProductCard from "../components/ProductCard/ProductCard";
+import BlogCard from "../components/BlogCard/BlogCard";
 export default function Test() {
   return (
     <>
@@ -27,8 +28,11 @@ export default function Test() {
           <ProductCard />
         </section>
       </div>
-      <div className="text-center bg-slate-200 py-8">
+      <div className="bg-slate-200 py-8">
         <h1 className="text-5xl mb-3.5">Blog card</h1>
+        <div>
+          <BlogCard />
+        </div>
       </div>
       <div className="text-center bg-slate-300 py-8">
         <h1 className="text-5xl mb-3.5">course card</h1>
