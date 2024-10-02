@@ -37,6 +37,11 @@ const config: Config = {
       fontFamily: {
         anjoman: ["var(--Anjoman)"],
       },
+      fontWeight: {
+        light: 300,   
+        reqular: 500,   
+        bold: 800,   
+      },
     },
   },
   plugins: [],

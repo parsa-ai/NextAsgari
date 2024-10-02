@@ -5,4 +5,5 @@
 body {
   font-family: var(--Anjoman);
   direction: rtl;
+  font-feature-settings: "pnum" on, "lnum" off !important;
 }
