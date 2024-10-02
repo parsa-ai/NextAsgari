@@ -2,13 +2,14 @@ import React from "react";
 import Button from "../components/Button/Button";
 import ProductCard from "../components/ProductCard/ProductCard";
 import BlogCard from "../components/BlogCard/BlogCard";
+import BlogCardSidebar from "../components/BlogCardSidebar/BlogCardSidebar";
 export default function Test() {
   return (
     <>
       <div className="text-center bg-slate-50 py-8">
         <h1 className="text-5xl mb-3.5">Buttons</h1>
         <div className="relative overflow-x-auto">
-          <table className="w-full text-sm text-left rtl:text-right text-gray-500">
+          <table className="w-full">
             <tbody>
               <tr>
                 <td className="px-6 py-4">
@@ -31,7 +32,18 @@ export default function Test() {
       <div className="bg-slate-200 py-8">
         <h1 className="text-5xl mb-3.5">Blog card</h1>
         <div>
-          <BlogCard />
+        <table className="w-full ">
+            <tbody>
+              <tr>
+                <td className="px-6 py-4">
+                <BlogCard />
+                </td>
+                <td className="px-6 py-4">
+                <BlogCardSidebar />
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <div className="text-center bg-slate-300 py-8">
