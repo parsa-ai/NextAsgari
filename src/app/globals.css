@@ -7,3 +7,7 @@ body {
   direction: rtl;
   font-feature-settings: "pnum" on, "lnum" off !important;
 }
+.container{
+  max-width: 1216px;
+  padding: 0 1rem;
+}

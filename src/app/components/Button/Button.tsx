@@ -1,11 +1,11 @@
 import React from "react";
 import { buttonProps } from "@/app/Types/Types";
 import "./Button.css"
-export default function Button({ varient, text, icon }: buttonProps) {
+export default function Button({ varient, text, icon , cusClass , cusFunc }: buttonProps) {
   return (
-    <a href="#" className={`button ${varient}`} >
-    {icon ? <img src={icon} className="ml-2" /> : null}
+    <button onClick={cusFunc} className={`button ${varient} ${cusClass}`} >
+    {icon ? <img src={icon} className="w-5 h-5" /> : null}
     {text}
-  </a>
+  </button>
   )
 }

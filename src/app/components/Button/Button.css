@@ -1,5 +1,5 @@
 .button {
-  @apply border border-solid  border-light-950 flex inline-flex flex-row py-2.5 px-4 rounded-3xl gap-1.5;
+  @apply border border-solid  border-light-950 flex text-nowrap flex-row p-3 rounded-3xl gap-1.5 text-sm items-center;
 }
 .button.outlined {
   @apply bg-white text-light-950;
