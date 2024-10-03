@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Header from "./components/Header/Header";
+import MainMenu from "./components/MainMenu/MainMenu";
 import "./globals.css";
 
 const Anjoman = localFont({
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={`${Anjoman.variable} antialiased`}>
         <Header />
         {children}
+        <MainMenu/>
       </body>
     </html>
   );

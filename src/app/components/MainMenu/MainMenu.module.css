@@ -1,0 +1,6 @@
+.active{
+    @apply bg-light-950 text-white rounded-3xl px-2 py-1
+}
+.active img{
+    @apply invert
+}
