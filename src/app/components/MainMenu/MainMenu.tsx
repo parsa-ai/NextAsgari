@@ -7,16 +7,21 @@ import { tabs } from "../../data/data";
 import styles from "./MainMenu.module.css";
 
 export default function MainMenu() {
-  const [isDropdownSearchOpen, setIsDropdownSearchOpen] = useState(false);
+  const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(false);
   const [isDropdownRateOpen, setIsDropdownRateOpen] = useState(false);
-  const [activeButton, setActiveButton] = useState(null);
+  const [isDropdownSearchOpen, setIsDropdownSearchOpen] = useState(false);
+  const [searchVal, setSearchVal] = useState("");
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (!event.target.closest(".hasDropDown *")) {
-        setIsDropdownSearchOpen(false);
+        setIsDropdownMenuOpen(false);
       }
       if (!event.target.closest(".hasDropDown2 *")) {
         setIsDropdownRateOpen(false);
+      }
+      if (!event.target.closest(".hasDropDown3 *")) {
+        setIsDropdownSearchOpen(false);
       }
     };
     document.addEventListener("click", handleClickOutside);
@@ -28,18 +33,17 @@ export default function MainMenu() {
     if (setter) {
       setter((prev) => !prev);
     }
-    setActiveButton((prev) => (prev === buttonId ? null : buttonId));
   };
   return (
     <div className="fixed bottom-4  w-full ">
       <nav className="border border-light-950 rounded-3xl bg-white py-2 px-3 mx-3 ">
         <ul className="flex justify-between items-center relative">
           <li className="hasDropDown">
-            <button className={`flex items-center  ${activeButton === "menu" && styles.active}`} onClick={() => toggleDropdown(setIsDropdownSearchOpen, "menu")}>
+            <button className={`flex items-center  ${isDropdownMenuOpen && styles.active}`} onClick={() => toggleDropdown(setIsDropdownMenuOpen, "menu")}>
               <Image src="/images/menu-line-horizontal.svg" alt="menu icon" width={24} height={24} />
-              {activeButton === "menu" && <span className="mr-2 text-sm">لیست منو</span>}
+              {isDropdownMenuOpen &&  <span className="mr-2 text-sm">لیست منو</span>}
             </button>
-            {isDropdownSearchOpen && (
+            {isDropdownMenuOpen && (
               <div className="z-10 absolute  bottom-full mb-4 font-normal bg-white divide-y divide-gray-100 rounded-3xl border border-light-950 shadow w-full">
                 <ul className="p-2 text-sm ">
                   <li className={`flex justify-center`}>
@@ -77,9 +81,9 @@ export default function MainMenu() {
             )}
           </li>
           <li className="hasDropDown2">
-            <button className={`flex items-center  ${activeButton === "rate" && styles.active}`} onClick={() => toggleDropdown(setIsDropdownRateOpen, "rate")}>
+            <button className={`flex items-center  ${isDropdownRateOpen && styles.active}`} onClick={() => toggleDropdown(setIsDropdownRateOpen, "rate")}>
               <Image src="/images/chart-notification.svg" alt="menu icon" width={24} height={24} />
-              {activeButton === "rate" && <span className="mr-2 text-sm">نرخ لحظه ای</span>}
+              {isDropdownRateOpen && <span className="mr-2 text-sm">نرخ لحظه ای</span>}
             </button>
             {isDropdownRateOpen && (
               <div className="rateWrapper z-10 p-3 absolute left-0 right-0 bottom-full mb-4 font-normal bg-white divide-y divide-gray-100 rounded-3xl border border-light-950 shadow w-full">
@@ -87,11 +91,21 @@ export default function MainMenu() {
               </div>
             )}
           </li>
-          <li>
-            <button className={`flex items-center ${activeButton === "search" && styles.active}`} onClick={() => toggleDropdown(null, "search")}>
+          <li className="hasDropDown3">
+            <button className={`flex items-center ${isDropdownSearchOpen && styles.active}`} onClick={() => toggleDropdown(setIsDropdownSearchOpen, "search")}>
               <Image src="/images/vector.svg" alt="menu icon" width={24} height={24} />
-              {activeButton === "search" && <span className="mr-2 text-sm">جست و جو</span>}
+              {isDropdownSearchOpen && <span className="mr-2 text-sm">جست و جو</span>}
             </button>
+            {isDropdownSearchOpen && (
+              <div className="z-10 absolute bottom-full mb-4 left-0 right-0  font-normal bg-white divide-y divide-gray-100 rounded-3xl border border-light-950 shadow w-full">
+                <ul className="py-2 text-sm">
+                  <li className="flex px-3">
+                    <input type="search" className={`w-full h-full outline-none ${styles.search}`} placeholder="جستجو کنید ..." value={searchVal} onChange={(e) => setSearchVal(e.target.value)} />
+                    {!!searchVal.length && <Image src="/images/cancle.svg" alt="clear search" width={20} height={20} onClick={() => setSearchVal("")} />}
+                  </li>
+                </ul>
+              </div>
+            )}
           </li>
           <li>
             <Link href={"/"}>
