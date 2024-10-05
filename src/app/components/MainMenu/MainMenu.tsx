@@ -35,7 +35,7 @@ export default function MainMenu() {
     }
   };
   return (
-    <div className="fixed bottom-4  w-full block lg:hidden ">
+    <div className="fixed bottom-4  w-full block lg:hidden z-50">
       <nav className="border border-light-950 rounded-3xl bg-white py-2 px-3 mx-3 ">
         <ul className="flex justify-between items-center relative">
           <li className="hasDropDown">

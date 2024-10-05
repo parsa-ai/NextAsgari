@@ -68,6 +68,9 @@ const config: Config = {
         reqular: 500,   
         bold: 800,   
       },
+      backgroundImage: {
+        'hero-pattern': "url('/image/header/Ellipse 1246.svg')",
+      }
     },
   },
   plugins: [],
