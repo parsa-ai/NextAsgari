@@ -64,12 +64,18 @@ const config: Config = {
         anjoman: ["var(--Anjoman)"],
       },
       fontWeight: {
-        light: 300,   
-        reqular: 500,   
-        bold: 800,   
+        "light": "300",   
+        "reqular": "500",   
+        "bold": "800",   
       },
       backgroundImage: {
         'hero-pattern': "url('/image/header/Ellipse 1246.svg')",
+      },
+      borderRadius : {
+        "4xl" :"7.5rem"
+      },
+      padding : {
+        "7.5rem":"7.5rem",
       }
     },
   },
