@@ -72,7 +72,9 @@ const config: Config = {
         'hero-pattern': "url('/image/header/Ellipse 1246.svg')",
       },
       borderRadius : {
-        "4xl" :"7.5rem"
+        "4xl" :"7.5rem", 
+        "12" : "3rem",
+        "40": "40px"
       },
       padding : {
         "7.5rem":"7.5rem",

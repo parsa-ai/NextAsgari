@@ -3,8 +3,9 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
+    // hero section
     <div className="section-wrapper">
-      <section className="pt-20 bg-center w-full bg-white rounded-b-4xl " style={{ backgroundImage: " url('/images/header/Ellipse 1246.svg')" }}>
+      <section className="pt-20 bg-center w-full bg-white rounded-b-40 lg:rounded-b-4xl " style={{ backgroundImage: " url('/images/header/Ellipse 1246.svg')" }}>
         <div className="container">
           <header className="flex justify-center items-center pt-30 gap-6 flex-col">
             <h1 className="text-light-950 text-4xl lg:text-6xl  font-bold mb-6 text-center">مشاوره حرفه‌ای در تحلیل و آنالیز</h1>
