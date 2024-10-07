@@ -17,7 +17,7 @@ export default function ProductCard() {
     setProgress((prev) => (prev > 0 ? prev - 10 : 0));
   };
   return (
-    <section className="basis-[31.5%] bg-light-50 rounded-3xl p-1 pb-4  group hover:bg-light-950 hover:transition-all hover:cursor-pointer">
+    <section className="basis-full lg:basis-[31.5%] bg-light-50 rounded-3xl p-1 pb-4  group hover:bg-light-950 hover:transition-all hover:cursor-pointer">
       <section className="w-full h-[368px] bg-white rounded-[20px] p-6">
         <header className="border-b border-solid border-light-100 pb-6 mb-6 ">
           <p>طرح تولید انواع ربات های بازرسی صنعتی و ارائه خدمات بازرسی</p>

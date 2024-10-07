@@ -1,0 +1,25 @@
+.moreButtonWrapper {
+  @apply transition duration-300 mt-20 border border-solid py-2 pl-2 pr-4 self-center rounded-12  flex items-center justify-between gap-3;
+}
+.dark {
+  @apply border-light-950;
+}
+.dark div {
+  @apply bg-light-950;
+}
+.dark:hover {
+  @apply bg-light-950 text-white;
+}
+.light {
+  @apply border-white bg-light-950 text-white;
+}
+
+.light div {
+  @apply bg-white;
+}
+.light div img{
+  @apply invert;
+}
+.light:hover {
+  @apply bg-white text-light-950;
+}

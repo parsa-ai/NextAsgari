@@ -1,0 +1,7 @@
+.serviceItems:hover{
+    @apply bg-light-950 text-white cursor-pointer transition
+}
+.box{
+    height: 144px !important;
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+}
